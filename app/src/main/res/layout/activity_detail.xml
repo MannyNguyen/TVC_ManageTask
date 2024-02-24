@@ -1,0 +1,191 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.DetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="false">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="50dp"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="List task"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/re_view_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_box_comment"
+        android:layout_below="@id/app_bar"
+        android:background="@color/gray_transparent_light_main"
+        android:scrollbars="vertical" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp"
+        android:visibility="gone"
+        android:layout_below="@id/app_bar"
+        android:background="@drawable/blue_solid_box">
+
+        <RelativeLayout
+            android:id="@+id/rl_content_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <demo.example.com.tvc_erp.ui.view.CirleImageView
+                android:id="@+id/img_avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/tskColor"
+                app:civ_border_width="2dp" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@+id/img_avatar">
+
+                <EditText
+                    android:id="@+id/edt_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Text type ..."
+                    android:paddingLeft="5dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/transparent"/>
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/card_view"
+                android:layout_marginRight="90dp"
+                android:background="@drawable/blue_border_box"
+                android:text="Update"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/card_view"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/black_border_box"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_edit_attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_content_edit"
+            android:layout_margin="10dp"
+            android:scaleType="fitXY"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_box_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_attachment"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="50dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_attachment"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+
+            <Button
+                android:id="@+id/btn_del_attachment"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_remove_text" />
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/edt_comment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_attachment"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="60dp"
+            android:layout_toRightOf="@+id/btn_attachment"
+            android:background="@color/white"
+            android:hint="Write a comment ..."
+            android:textColorHint="@color/gray_light_main" />
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rl_attachment"
+            android:background="@drawable/icon_send" />
+
+        <Button
+            android:id="@+id/btn_attachment"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_attachment"
+            android:background="@drawable/icon_paperclip" />
+    </RelativeLayout>
+
+</RelativeLayout>
+

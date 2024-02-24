@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:paddingLeft="7dp"
+    android:paddingRight="7dp"
+    android:paddingTop="5dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/tskColor"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="@color/green_light_task" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <demo.example.com.tvc_erp.ui.view.CirleImageView
+                android:id="@+id/img_avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/txtWorkName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/img_avatar"
+                android:singleLine="true"
+                android:text="Report new task for bosssafsafsfasfasfafafaaafsffsfs"
+                android:textColor="@color/blue_black_main"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/llTaskTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtWorkName"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/img_avatar"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/ll_date">
+
+                    <TextView
+                        android:id="@+id/txtBy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/by"
+                        android:textColor="@color/gray_light_main"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/txtMastername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:singleLine="true"
+                        android:text="Jacky Nguyen"
+                        android:textColor="@color/blue_light_main"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_date"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/ll_comment">
+
+                    <ImageView
+                        android:id="@+id/icDate"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/icon_date" />
+
+                    <TextView
+                        android:id="@+id/txtDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/icDate"
+                        android:singleLine="true"
+                        android:text="Jan-13-2016"
+                        android:textColor="@color/blue_light_main"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="50dp">
+
+                    <ImageView
+                        android:id="@+id/icCmt"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/icon_comments" />
+
+                    <TextView
+                        android:id="@+id/txtNumCmt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/icDate"
+                        android:text="123"
+                        android:textColor="@color/gray_light_main"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/llTaskTime"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <demo.example.com.tvc_erp.ui.view.ExpandableTextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:text="It is a long established fact that a reader will be distracted by the readable content of a place    ssssssss"
+                    android:textSize="13sp" />
+
+                <!--<ImageView-->
+                <!--android:id="@+id/icMore"-->
+                <!--android:layout_width="15dp"-->
+                <!--android:layout_height="15dp"-->
+                <!--android:background="@drawable/icon_more"-->
+                <!--android:layout_marginLeft="3dp"/>-->
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_download"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/icon_paperclip"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_feature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llDescription"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ic_done"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/icon_done" />
+
+                    <TextView
+                        android:id="@+id/txt_done"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Done"
+                        android:textColor="@color/blue_light_main"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ic_accept"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/icon_accept" />
+
+                    <TextView
+                        android:id="@+id/txt_accept"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/accept"
+                        android:textColor="@color/blue_light_main"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_subtask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ic_subtask"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/icon_sub_task" />
+
+                    <TextView
+                        android:id="@+id/txt_subtask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sub_task"
+                        android:textColor="@color/gray_light_main"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_alert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ic_lert"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/icon_alert" />
+
+                    <TextView
+                        android:id="@+id/txt_lert"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/alert"
+                        android:textColor="@color/orange_light_task"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ic_del"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/icon_delete" />
+
+                    <TextView
+                        android:id="@+id/txt_del"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delete"
+                        android:textColor="@color/gray_light_main"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtTaskName"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_alignBaseline="@+id/txtWorkName"
+                android:layout_alignBottom="@+id/txtWorkName"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/task_name_box"
+                android:paddingTop="2dp"
+                android:text="Work"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".ui.activity.CreateTaskActivity">
+
+    <TabHost
+        android:id="@+id/thCreateIssue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_issue_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/title"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/edt_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/black_border_box"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+
+                        <TextView
+                            android:id="@+id/txr_taskmaster"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/task_master"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/white">
+
+                            <EditText
+                                android:id="@+id/edt_taskmaster"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="40dp"
+                                android:background="@color/white"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="10dp" />
+
+                            <ImageView
+                                android:id="@+id/img_search_taskmaster"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/icon_search"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="10dp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txt_person_in_charge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/person_in_charge"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/white">
+
+                            <EditText
+                                android:id="@+id/edt_person_in_charge"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginRight="40dp"
+                                android:background="@color/white"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="10dp" />
+
+                            <ImageView
+                                android:id="@+id/img_search_person_charge"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/icon_search" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/ll_add_cc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="top">
+
+                            <Button
+                                android:id="@+id/btn_add_cc"
+                                android:layout_width="110dp"
+                                android:layout_height="60dp"
+                                android:background="@color/blue_light_main"
+                                android:text="@string/add_acc"
+                                android:textColor="@color/white" />
+
+                            <demo.example.com.tvc_erp.ui.view.ContactsCompletionView
+                                android:id="@+id/searchView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_toRightOf="@+id/btn_add_cc"
+                                android:background="@android:color/transparent"
+                                android:cursorVisible="false"
+                                android:focusableInTouchMode="true"
+                                android:padding="10dp"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="19sp" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txt_start_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/start_date"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/white"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/edt_start_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginRight="40dp"
+                                android:background="@color/white"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="10dp" />
+
+                            <ImageView
+                                android:id="@+id/img_start_calendar"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/icon_calendar" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txt_due_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/due_date"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/white"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/edt_due_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginRight="40dp"
+                                android:background="@color/white"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="10dp" />
+
+                            <ImageView
+                                android:id="@+id/img_due_calendar"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/icon_calendar" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txt_end_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/end_date"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/white"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/edt_end_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginRight="40dp"
+                                android:background="@color/white"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="10dp" />
+
+                            <ImageView
+                                android:id="@+id/img_end_calendar"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/icon_calendar" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txt_job_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/job_type"
+                            android:textSize="14dp" />
+
+                        <!--<RelativeLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:layout_marginTop="5dp">-->
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/spinner_job_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/black_border_box"
+                            app:ms_background_color="#f2f2f2"
+                            app:ms_dropdown_height="wrap_content"
+                            app:ms_dropdown_max_height="350dp"
+                            app:ms_text_color="@android:color/darker_gray" />
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:id="@+id/img_job_type"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:background="@drawable/icon_search" />-->
+
+                        <!--</RelativeLayout>-->
+
+                        <TextView
+                            android:id="@+id/txt_priority"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/priority"
+                            android:textSize="14sp" />
+
+                        <!--<RelativeLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:background="@color/white">-->
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/spinner_job_priority"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/black_border_box"
+                            app:ms_background_color="#f2f2f2"
+                            app:ms_dropdown_height="wrap_content"
+                            app:ms_dropdown_max_height="350dp"
+                            app:ms_text_color="@android:color/darker_gray" />
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:id="@+id/img_priority"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:background="@drawable/icon_search" />-->
+
+                        <!--<EditText-->
+                        <!--android:id="@+id/edt_priority"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:background="@color/white"-->
+                        <!--android:paddingBottom="10dp"-->
+                        <!--android:paddingLeft="5dp"-->
+                        <!--android:paddingRight="5dp"-->
+                        <!--android:paddingTop="10dp"-->
+                        <!--android:layout_alignParentTop="true"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_alignParentStart="true" />-->
+
+                        <!--</RelativeLayout>-->
+                        <TextView
+                            android:id="@+id/txt_building"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/building"
+                            android:textSize="14dp" />
+
+                        <!--<RelativeLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:layout_marginTop="5dp">-->
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/spinner_building"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/black_border_box"
+                            app:ms_background_color="#f2f2f2"
+                            app:ms_dropdown_height="wrap_content"
+                            app:ms_dropdown_max_height="350dp"
+                            app:ms_text_color="@android:color/darker_gray" />
+
+                        <TextView
+                            android:id="@+id/txt_apartment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/apartment"
+                            android:textSize="14dp" />
+
+                        <!--<RelativeLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:layout_marginTop="5dp">-->
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/spinner_apartment"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/black_border_box"
+                            app:ms_background_color="#f2f2f2"
+                            app:ms_dropdown_height="wrap_content"
+                            app:ms_dropdown_max_height="350dp"
+                            app:ms_text_color="@android:color/darker_gray" />
+
+                        <TextView
+                            android:id="@+id/txt_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/status"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/edt_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/black_border_box"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="10dp" />
+
+                        <TextView
+                            android:id="@+id/txt_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/description"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/edt_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/black_border_box"
+                            android:gravity="left|top"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_attach"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/imgbt_attach"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/icon_attachment" />
+
+                            <TextView
+                                android:id="@+id/txt_attachments"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/attachments"
+                                android:textColor="@color/blue_light_main" />
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rw_images"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_sendmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txt_sendmail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:text="@string/send_mail" />
+
+                            <demo.example.com.tvc_erp.ui.view.CheckboxCreate
+                                android:id="@+id/chk_send_email"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/icon_unckeck_mail" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btn_post"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/blue_border_box"
+                            android:text="@string/post"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/btn_cancel"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/blue_solid_box"
+                            android:text="@string/close"
+                            android:textColor="@color/blue_light_main" />
+
+                    </LinearLayout>
+                </ScrollView>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_issue_con"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_percent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/percent"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/edt_percent"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/black_border_box"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+
+                        <TextView
+                            android:id="@+id/txt_duration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/duration"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/edt_duration"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/black_border_box"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+
+                        <TextView
+                            android:id="@+id/txt_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/comment"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/edt_comment"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/black_border_box"
+                            android:gravity="left|top"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp" />
+
+                        <Button
+                            android:id="@+id/btn_con_post"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/blue_border_box"
+                            android:text="@string/post"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/btn_con_cancel"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/blue_solid_box"
+                            android:text="@string/close"
+                            android:textColor="@color/blue_light_main" />
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</RelativeLayout>

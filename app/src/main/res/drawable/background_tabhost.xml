@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:right="50dip">
+        <shape
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="rectangle" >
+            <solid android:color="@color/green_light_task" />
+        </shape>
+    </item>
+    <item android:left="50dip">
+        <shape
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="rectangle" >
+            <solid android:color="@color/blue_light_main" />
+        </shape>
+    </item>
+
+    <corners
+        android:radius="25dp" >
+    </corners>
+
+</layer-list>

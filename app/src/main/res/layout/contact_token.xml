@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<demo.example.com.tvc_erp.ui.view.TokenTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/name"
+    android:layout_width="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content"
+    android:background="@drawable/blue_solid_box"
+    android:textSize="17sp"
+    android:maxLines="1"
+    android:ellipsize="end"
+    android:padding="4dp"
+    android:textColor="@color/blue_light_main"
+    tools:text="Glenda Jönsson" />

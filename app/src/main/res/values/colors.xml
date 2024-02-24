@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#00000000</color>
+    <color name="black_light">#cccccc</color>
+    <color name="white">#ffffff</color>
+    <color name="white_dark">#f2f2f2</color>
+    <!--main color-->
+    <color name="blue_black_main">#26343A</color>
+    <color name="blue_light_main">#00589F</color>
+    <color name="green_main">#65b964</color>
+    <color name="gray_light_main">#99989b</color>
+    <color name="gray_transparent_main">#8099989b</color>
+    <color name="gray_transparent_light_main">#2099989b</color>
+
+    <!--task color-->
+    <color name="green_light_task">#05e986</color>
+    <color name="pink_light_task">#fc126f</color>
+    <color name="yellow_light_task">#ffdf02</color>
+    <color name="blue_light_task">#00589F</color>
+    <color name="orange_light_task">#ff6e16</color>
+
+
+    <color name="issue">#F44336</color>
+    <color name="opportunity">#009688</color>
+    <color name="task">#8272FA</color>
+    <color name="news">#FA72A8</color>
+
+    <color name="issue_color">#F44336</color>
+    <color name="opportunity_color">#009688</color>
+    <color name="task_color">#8272FA</color>
+    <color name="news_color">#FA72A8</color>
+</resources>

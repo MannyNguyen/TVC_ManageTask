@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">TVC_ERP</string>
+
+    <string name="login">Login</string>
+    <string name="sign_up">Sign up</string>
+    <string name="text_sign_up_1">Don\'t have a account ?</string>
+    <string name="text_sign_up_2"><u>\u0020 Sign up \u0020</u></string>
+    <string name="text_sign_up_3">here</string>
+    <string name="hint_email">Enter your email</string>
+    <string name="hint_pass">Enter your password</string>
+    <string name="hint_code">Security code</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="message">Message</string>
+    <string name="ok">OK</string>
+    <string name="login_fail">Login failed</string>
+    <string name="message_login_fail">"Please check your info and try again"</string>
+    <string name="message_login_already">"The account is in use already. Please check and try again"</string>
+
+    <!--item task list-->
+    <string name="by">By</string>
+    <string name="done">Done</string>
+    <string name="accept">Accept</string>
+    <string name="sub_task">Sub task</string>
+    <string name="alert">Alert</string>
+    <string name="delete">Delete</string>
+
+    <!--create task-->
+    <string name="information">Infomation</string>
+    <string name="conclusion">Conclusion</string>
+    <string name="title">Title</string>
+    <string name="task_master">Task master</string>
+    <string name="access_group">Access group</string>
+    <string name="person_in_charge">Person in charge</string>
+    <string name="add_acc">Add cc</string>
+    <string name="start_date">Start date</string>
+    <string name="due_date">Due date</string>
+    <string name="end_date">End date</string>
+    <string name="job_type">Job type</string>
+    <string name="building">Building</string>
+    <string name="apartment">Apartment</string>
+    <string name="priority">Priority</string>
+    <string name="status">Status</string>
+    <string name="description">Description</string>
+    <string name="attachments">Attachments</string>
+    <string name="send_mail">Send mail</string>
+    <string name="post">Post</string>
+    <string name="close">Close</string>
+
+    <!--conclusion-->
+    <string name="percent">Percent complete(%)</string>
+    <string name="duration">Duration</string>
+    <string name="comment">Comment</string>
+
+    <!--conclusion-->
+    <string name="cancel">Cancel</string>
+    <string name="write_to_search">Write to search</string>
+    <string name="error_limit_size_multi_photo">Photos size limit is 75Mb. Please remove or choose other photos.</string>
+    <string name="error_limit_type_photo">Photo must be png/jpg/jpeg/gif format.</string>
+
+
+    <!--dialog-->
+    <string name="please_wait">Please wait ...</string>
+
+    <!--error-->
+    <string name="error_user_name_require">Email is required</string>
+    <string name="error_password_require">Password is required</string>
+    <string name="error_code_require">Code is required</string>
+    <string name="title_require">Title is required</string>
+    <string name="task_master_require">Task master is required</string>
+    <string name="pic_require">Person in charge is required</string>
+    <string name="description_require">Description is required</string>
+    <string name="error_user_name_validate">Required at least 6 and less than 30 characters (allow letters, numbers and @ . + - _ characters)</string>
+</resources>

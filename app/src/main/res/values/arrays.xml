@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="summary">
+        <item>To Summarize</item>
+        <item>News</item>
+        <item>Opportunity</item>
+        <item>My orders haven\'t accomplished yet</item>
+        <item>My orders accomplished </item>
+        <item>My job assignments haven\'t accomplished yet</item>
+        <item>My job assignments accomplished</item>
+        <item>My related job assignments haven\'t accomplished yet</item>
+        <item>My related job assignments accomplished</item>
+        <item>Requests haven\'t handed over</item>
+
+    </string-array>
+
+    <string-array name="read">
+        <item>All</item>
+        <item>Read</item>
+        <item>Unread</item>
+    </string-array>
+
+    <string-array name="sort">
+        <item>Sort By Last Update</item>
+        <item>Sort By Priority</item>
+    </string-array>
+</resources>
